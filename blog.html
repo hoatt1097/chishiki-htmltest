@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .header h1 {
+            text-align: center;
+        }
+
+        .header img {
+            height: 200px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+
+        /* Block1 */
+
+        .block1 {
+            display: flex;
+        }
+
+        .block {
+            width: 33.33333333%;
+            padding: 10px;
+            background-color: indigo;
+            text-align: center;
+        }
+
+        .block .block_content {
+            height: 100%;
+            background-color: indianred;
+            border: 1px solid gray;
+        }
+
+        .block1 .block:first-child {
+            padding-left: 0;
+        }
+
+        .block1 .block:last-child {
+            padding-right: 0;
+        }
+
+        /* Css after */
+        .block .block_content img {
+            border-radius: 50%;
+            width: 140px;
+            height: 140px;
+            padding-top: 10px;
+        }
+
+
+        /* Block info */
+        .info {
+            height: 300px;
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .info img {
+            width: 40%;
+        }
+
+        .info .block_content {
+            padding: 30px;
+            text-align: justify;
+        }
+
+        .block3 {
+            flex-direction: row-reverse;
+        }
+
+        hr {
+            margin: 40px 0;
+        }
+
+        /* footer */
+        .footer {
+            height: 100px;
+            background-color: lightblue;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Blog của Chishiki</h1>
+            <img src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__480.jpg" alt="slide">
+        </div>
+        <div class="content">
+            <div class="block1">
+                <div class="block">
+                    <div class="block_content">
+                        <img src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__480.jpg" alt="">
+                        <h3>Blog của Chishiki</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="block_content">
+                        <img src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__480.jpg" alt="">
+                        <h3>Blog của Chishiki</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+                <div class="block">
+                    <div class="block_content">
+                        <img src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__480.jpg" alt="">
+                        <h3>Blog của Chishiki</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="info block2">
+                <img src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__480.jpg" alt="slide">
+                <div class="block_content">
+                    <h2>Blog của Chishiki</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="info block3">
+                <img src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__480.jpg" alt="slide">
+                <div class="block_content">
+                    <h2>Blog của Chishiki</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+            </div>
+
+            <hr/>
+
+            <div class="info block2">
+                <img src="https://cdn.pixabay.com/photo/2016/05/05/02/37/sunset-1373171__480.jpg" alt="slide">
+                <div class="block_content">
+                    <h2>Blog của Chishiki</h2>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                        when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="footer"></div>
+    </div>
+    
+</body>
+</html>
