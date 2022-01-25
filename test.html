@@ -7,50 +7,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        
-ul {
-    list-style: none;
-    background-color: lavender;
-}
+        body {
+            font-size: 20px;
+        }
 
-ul li {
-    padding: 10px;
-    display: inline-block;
-    font-weight: bold;
-}
+        .container {
+            display: flex;
+            height: 400px;
+            width: 100%;
+            margin: 0 auto;
+        }
 
-ul li:hover {
-    cursor: pointer;
-    background-color: antiquewhite;
-}
-                
+        .left {
+            width: 50%;
+            height: 100%;
+            background-color: #ccc;
+            border-right: 1px solid grey;
+            text-align: center;
+            padding: 20px
+        }
+
+        .left img {
+            height: 80%;
+        }
+
+        .right {
+            width: 50%;
+            height: 100%;
+            background-color: #ddd;
+            padding: 20px;
+        }
+
+        input[type=text] {
+            width: 100px;
+            margin-right: 10px;
+        }
+
+        input[type=submit] {
+            background-color: green;
+            color: white;
+            margin-left: 30px;
+            cursor: pointer;
+            padding: 5px;
+            width: 100px;
+        }
+
+        .result {
+            margin: 10px 0;
+        }
     </style>
 </head>
 
 <body>
-    <div class="example">
-        <?php 
-            echo "ádasdasd";
-            for() {
 
-            }
-            mảng
-        ?>
-        <ul>
-            <li>Xuất bản</li>
-            <li>Sách</li>
-            <li>Tác giả</li>
-            <li>Xã hội</li>
-            <li>Thế giời</li>
-            <li>Kinh doanh</li>
-            <li>Công nghệ</li>
-            <li>Thể thao</li>
-            <li>Giải trí</li>
-            <li>Đời sống</li>
-            <li>Euro2020</li>
-        </ul>
-               
+    <div class="container">
+        <div class="left">
+            <img src="images/sum.png" alt="">
+        </div>
+        <div class="right">
+            <h1>Chương trình cộng 2 số</h1>
+            <form method="POST" action="#">
+                <input type="text" name="a" value="" />
+                +
+                <input type="text" name="b" value="" />
+
+                <input type="submit" name="calculate" value="Submit" />
+            </form>
+
+            <div class="result">
+                Tổng 2 số là 12345
+            </div>
+
+        </div>
     </div>
+
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Tổng 2 số</title>
+    <title>Giải phương trình bậc nhất</title>
     <style>
         body {
             font-size: 20px;
@@ -67,18 +67,18 @@
 <body>
     <div class="container">
         <div class="left">
-            <img src="../images/sum.png" alt="">
+            <img src="../images/ptb1.png" alt="">
         </div>
         <div class="right">
-            <?php 
+        <?php 
                 $result = '';
                 $error = '';
                 if (isset($_POST['calculate']))
                 {
                     // Bước 1: Nhập a,b
                     // Validate thông tin và tính toán
-                    $a = $_POST['a'];
-                    $b = $_POST['b'];
+                    $a = isset($_POST['a']) ? $_POST['a'] : '';
+                    $b = isset($_POST['b']) ? $_POST['b'] : '';
                     if (!is_numeric($a)) {
                         $error = "Bạn nhập sai định dạng số a";
                     }
@@ -94,16 +94,24 @@
 
                     if($error == '') {
                         // Bước 2: Tính toán
-                        $result = $a + $b;
-                        $result = "Tổng 2 số là: $result";
+                        if ($a == 0){
+                            if ($b == 0){
+                                $result = "Phương trình vô số nghiệm";
+                            } else {
+                                $result = "Phương trình vô nghiệm";
+                            }
+                        } else {
+                            $result = -($b) / $a;
+                            $result = "Nghiệm của phương trình là: $result";
+                        }
                     }
                 }
             ?>
-            <h1>Chương trình cộng 2 số</h1>
-            <form method="POST" action="sum.php">
-                <input type="text" name="a" id="input" value="<?php if(isset($a)) echo $a ?>"/>
+            <h1>Giải phương trình bậc nhất</h1>
+            <form method="POST" action="ptb1.php">
+                <input type="text" name="a" id="input" value="<?php if(isset($a)) echo $a ?>"/>x 
                 +
-                <input type="text" name="b" id="input" value="<?php if(isset($a)) echo $b ?>"/>
+                <input type="text" name="b" id="input" value="<?php if(isset($a)) echo $b ?>"/> = 0
 
                 <input type="submit" name="calculate" value="Submit"/>
             </form>
@@ -128,11 +136,11 @@
             <b>HTML</b>
             <textarea disabled style="width: 100%; height: 100%;">
 
-<h1>Chương trình cộng 2 số</h1>
-<form method="POST" action="sum.php">
-    <input type="text" name="a" id="input" value="<?php if(isset($a)) echo $a ?>"/>
+<h1>Giải phương trình bậc nhất</h1>
+<form method="POST" action="ptb1.php">
+    <input type="text" name="a" id="input" value="<?php if(isset($a)) echo $a ?>"/>x 
     +
-    <input type="text" name="b" id="input" value="<?php if(isset($a)) echo $b ?>"/>
+    <input type="text" name="b" id="input" value="<?php if(isset($a)) echo $b ?>"/> = 0
 
     <input type="submit" name="calculate" value="Submit"/>
 </form>
@@ -141,6 +149,7 @@
     &lt;?php echo $error; ?>
     &lt;?php echo $result; ?>
 </div>
+
 
             </textarea>
         </div>
@@ -172,8 +181,16 @@
 
         if($error == '') {
             // Bước 2: Tính toán
-            $result = $a + $b;
-            $result = "Tổng 2 số là: $result";
+            if ($a == 0){
+                if ($b == 0){
+                    $result = "Phương trình vô số nghiệm";
+                } else {
+                    $result = "Phương trình vô nghiệm";
+                }
+            } else {
+                $result = -($b) / $a;
+                $result = "Nghiệm của phương trình là: $result";
+            }
         }
     }
 ?>
