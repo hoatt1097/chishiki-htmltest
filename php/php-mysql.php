@@ -90,12 +90,6 @@ $connection = mysqli_connect($db_host, $db_user, $db_pass, $db_database, $db_por
 
         </textarea>
 
-
-        <?php 
-            $connection = mysqli_connect( "localhost" ,"root", "root" , "csk-k7", 3306);
-            $sql = "SELECT * FROM user ORDER BY username ASC";
-            $result = mysqli_query($connection, $sql);       
-        ?>
         <h3>Danh sách</h3>
         <table>
             <tr>
@@ -106,18 +100,46 @@ $connection = mysqli_connect($db_host, $db_user, $db_pass, $db_database, $db_por
                 <th>Program</th>
                 <th>Country</th>
             </tr>
-            <?php 
-                while($user = mysqli_fetch_array($result)){
-                    echo "<tr>";
-                    echo "<td>".$user["username"]."</td>";
-                    echo "<td>".$user["fullname"]."</td>";
-                    echo "<td>".$user["email"]."</td>";
-                    echo "<td>".$user["gender"]."</td>";
-                    echo "<td>".$user["language"]."</td>";
-                    echo "<td>".$user["country"]."</td>";
-                    echo "</tr>";
-                }             
-            ?>
+            <tr>
+                <td>Phu</td>
+                <td>Nguyen Duc Phu</td>
+                <td>phu@gmail.com</td>
+                <td>Name</td>
+                <td>PHP, Java</td>
+                <td>Vietnamese</td>
+            </tr>
+            <tr>
+                <td>Phu1</td>
+                <td>Nguyen Duc Phu1</td>
+                <td>phu1@gmail.com</td>
+                <td>Name</td>
+                <td>PHP, Java</td>
+                <td>Vietnamese</td>
+            </tr>
+            <tr>
+                <td>Phu2</td>
+                <td>Nguyen Duc Phu</td>
+                <td>phu@gmail.com</td>
+                <td>Name</td>
+                <td>PHP, Java</td>
+                <td>Vietnamese</td>
+            </tr>
+            <tr>
+                <td>Phu3</td>
+                <td>Nguyen Duc Phu</td>
+                <td>phu@gmail.com</td>
+                <td>Name</td>
+                <td>PHP, Java</td>
+                <td>Vietnamese</td>
+            </tr>
+            <tr>
+                <td>Phu4</td>
+                <td>Nguyen Duc Phu</td>
+                <td>phu@gmail.com</td>
+                <td>Name</td>
+                <td>PHP, Java</td>
+                <td>Vietnamese</td>
+            </tr>
         </table>
 
     </br>
