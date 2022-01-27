@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP + Mysql</title>
+    <style>
+        body {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .container {
+            width: 70%;
+            margin: 0 auto;
+            padding: 10px;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+            border-collapse: collapse;
+        }
+
+        table th {
+            background-color: #6b9988;
+        }
+
+        table td, table th {
+            border: 1px solid #ddd;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        /* Toogle */
+        #description {
+            display: none !important;
+        }
+
+        #description.show {
+            display: flex !important;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Div 1 -->
+    <div class="container">
+        <h3>Danh sách</h3>
+        <table>
+            <tr>
+                <th>Username</th>
+                <th>Fullname</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Program</th>
+                <th>Country</th>
+            </tr>
+            <tr>
+                <td>Phu</td>
+                <td>Nguyen Duc Phu</td>
+                <td>phu@gmail.com</td>
+                <td>Name</td>
+                <td>PHP, Java</td>
+                <td>Vietnamese</td>
+            </tr>
+            <tr>
+                <td>Phu1</td>
+                <td>Nguyen Duc Phu1</td>
+                <td>phu1@gmail.com</td>
+                <td>Name</td>
+                <td>PHP, Java</td>
+                <td>Vietnamese</td>
+            </tr>
+            <tr>
+                <td>Phu2</td>
+                <td>Nguyen Duc Phu</td>
+                <td>phu@gmail.com</td>
+                <td>Name</td>
+                <td>PHP, Java</td>
+                <td>Vietnamese</td>
+            </tr>
+            <tr>
+                <td>Phu3</td>
+                <td>Nguyen Duc Phu</td>
+                <td>phu@gmail.com</td>
+                <td>Name</td>
+                <td>PHP, Java</td>
+                <td>Vietnamese</td>
+            </tr>
+            <tr>
+                <td>Phu4</td>
+                <td>Nguyen Duc Phu</td>
+                <td>phu@gmail.com</td>
+                <td>Name</td>
+                <td>PHP, Java</td>
+                <td>Vietnamese</td>
+            </tr>
+        </table>
+
+        <div style="margin: 20px 10px 0 0"><b>Check answer</b> <button id="clickme"
+                style="padding:8px; background-color: #0074CC; color: white; border: none; border-radius: 4px; cursor: pointer;">Click
+                Me</button></div>
+        <div class="description" id="description" style="display: flex;  height: 300px;">
+            <div class="html" style="width: 50%; margin: 10px; margin-left: 0;">
+                <b>HTML</b>
+                <textarea disabled style="width: 100%; height: 100%;">
+
+<div class="container">
+    <h3>Danh sách</h3>
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Fullname</th>
+            <th>Email</th>
+            <th>Gender</th>
+            <th>Program</th>
+            <th>Country</th>
+        </tr>
+        <tr>
+            <td>Phu</td>
+            <td>Nguyen Duc Phu</td>
+            <td>phu@gmail.com</td>
+            <td>Name</td>
+            <td>PHP, Java</td>
+            <td>Vietnamese</td>
+        </tr>
+        <tr>
+            <td>Phu1</td>
+            <td>Nguyen Duc Phu1</td>
+            <td>phu1@gmail.com</td>
+            <td>Name</td>
+            <td>PHP, Java</td>
+            <td>Vietnamese</td>
+        </tr>
+        <tr>
+            <td>Phu2</td>
+            <td>Nguyen Duc Phu</td>
+            <td>phu@gmail.com</td>
+            <td>Name</td>
+            <td>PHP, Java</td>
+            <td>Vietnamese</td>
+        </tr>
+        <tr>
+            <td>Phu3</td>
+            <td>Nguyen Duc Phu</td>
+            <td>phu@gmail.com</td>
+            <td>Name</td>
+            <td>PHP, Java</td>
+            <td>Vietnamese</td>
+        </tr>
+        <tr>
+            <td>Phu4</td>
+            <td>Nguyen Duc Phu</td>
+            <td>phu@gmail.com</td>
+            <td>Name</td>
+            <td>PHP, Java</td>
+            <td>Vietnamese</td>
+        </tr>
+    </table>
+</div>
+                </textarea>
+            </div>
+            <div class="css" style="width: 50%; margin: 10px; margin-right: 0;">
+                <b>CSS</b>
+                <textarea disabled style="width: 100%; height: 100%;">
+
+body {
+    margin: 0;
+    font-size: 18px;
+}
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+table {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+table th {
+    background-color: #6b9988;
+}
+
+table td, table th {
+    border: 1px solid #ddd;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+                </textarea>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("clickme").addEventListener("click", function () {
+            document.getElementById("description").classList.toggle("show");
+        });
+    </script>
+</body>
+
+</html>
