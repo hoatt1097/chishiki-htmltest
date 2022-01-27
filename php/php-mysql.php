@@ -88,7 +88,7 @@ $connection = mysqli_connect($db_host, $db_user, $db_pass, $db_database, $db_por
 
     $user = mysqli_fetch_array($result)
 
-            </textarea>
+        </textarea>
 
 
         <?php 
@@ -169,6 +169,7 @@ $connection = mysqli_connect($db_host, $db_user, $db_pass, $db_database, $db_por
 
             </textarea>
         </div>
+    </div>
     </div>
     </div>
 
